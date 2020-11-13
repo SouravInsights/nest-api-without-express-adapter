@@ -1,0 +1,19 @@
+### Create Attendee
+POST http://localhost:3000/attendee HTTP/1.1
+Content-Type: application/json
+
+{
+    "userId": 4,
+    "eventId": 1
+}
+
+### Get Attendees
+
+GET http://localhost:3000/attendee HTTP/1.1
+Content-Type: application/json
+
+### Get Attendees for an event
+
+GET http://localhost:3000/attendee/3 HTTP/1.1
+Content-Type: application/json
+

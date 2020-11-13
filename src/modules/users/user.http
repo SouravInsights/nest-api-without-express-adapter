@@ -1,0 +1,33 @@
+### Create User
+POST http://localhost:3000/user HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Tadit",
+    "lastName": "Dash",
+    "email": "taditdash@yopmail.com",
+    "password": "password1",
+    "confirmPassword": "password1"
+}
+
+### Sign In
+POST http://localhost:3000/user/signin HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "taditdash@yopmail.com",
+    "password": "password1"
+}
+
+### Profile
+GET http://localhost:3000/user/profile HTTP/1.1
+Content-Type: application/json,
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRhbkBUYW5tYXlhLmNvbSIsImlhdCI6MTYwMjAwMzg0MiwiZXhwIjoxNjAyMDAzOTAyfQ.Mc3B-koOS8nq0qquSMKdh8OKXEK0XzVh46BDqR6d1SU"
+
+### confirmEmail
+POST http://localhost:3000/user/confirmEmail HTTP/1.1
+Content-Type: application/json
+
+{
+    "confirmationToken": "taditdash@yopmail.com"
+}
